@@ -129,6 +129,8 @@ app.delete(`${ISSUES_API_PATH}/:id`, async (req: Request, res: Response) => {
 });
 
 app.listen(PORT, HOST, () => {
-  console.log(`HOST: ${HOST}, PORT: ${PORT}`);
+  console.log(
+    `HOST: ${process.env.HOST}, PORT: ${process.env.PORT} , DB: ${process.env.DATABASE_URL}`
+  );
   console.log("Express server is running on port 3000");
 });
