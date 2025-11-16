@@ -7,6 +7,8 @@ import cors from "cors";
 app.use(express.json());
 app.use(cors());
 
+const PORT = Number(process.env.PORT) || 3000;
+const HOST = process.env.HOST || "localhost";
 const API_PATH = "/api";
 const ISSUES_API_PATH = `${API_PATH}/issues`;
 
@@ -126,6 +128,6 @@ app.delete(`${ISSUES_API_PATH}/:id`, async (req: Request, res: Response) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(PORT, HOST, () => {
   console.log("Express server is running on port 3000");
 });
