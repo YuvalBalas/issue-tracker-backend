@@ -20,7 +20,7 @@
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/project-name.git
+git clone https://github.com/YuvalBalas/issue-tracker-backend.git
 cd project-name
 
 # Install dependencies
