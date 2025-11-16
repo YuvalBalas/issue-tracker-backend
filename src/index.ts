@@ -8,7 +8,6 @@ app.use(express.json());
 app.use(cors());
 
 const PORT = Number(process.env.PORT) || 3000;
-const HOST = process.env.HOST || "0.0.0.0";
 const API_PATH = "/api";
 const ISSUES_API_PATH = `${API_PATH}/issues`;
 
@@ -128,7 +127,7 @@ app.delete(`${ISSUES_API_PATH}/:id`, async (req: Request, res: Response) => {
   }
 });
 
-app.listen(PORT, HOST, () => {
+app.listen(PORT, () => {
   console.log(
     `HOST: ${process.env.HOST}, PORT: ${process.env.PORT} , DB: ${process.env.DATABASE_URL}`
   );
